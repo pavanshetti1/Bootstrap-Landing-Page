@@ -1,0 +1,243 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+/* nav bar start  */
+.navbar-brand{
+    font-weight:700; 
+    font-size:1.5rem;
+    border:1px solid transparent;
+}
+
+.navbar-brand:hover{
+    border:1px solid orangered;
+    box-shadow:2px 2px 5px rgb(1, 1, 1, 0.2);
+    transform:scale(1.02);
+}
+
+/* nav bar ends  */
+
+/* hero section start  */
+.hero_image{
+    max-width:100vw;
+    min-height:700px;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)),url("images/hero.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.hero_section_contents{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:10rem;    
+}
+
+.hero-text h1{
+    max-width:500px;
+    font-size:3rem;
+    font-weight:700;
+    color:white;    
+    text-align:center;
+}
+
+
+.hero-input input{
+    width:18rem;
+    height:4rem;
+    border-radius:0.6rem;
+    border:none;
+    padding:1rem;
+    margin-right:1rem;
+}
+
+.hero-btn{
+    width:7rem;
+    height:4rem;
+    border-radius:0.6rem;
+    border:none; 
+}
+/* hero section ends  */
+
+/* card section  */
+.card_contents{
+    text-align:center;
+
+}
+
+.card_contents i{
+    font-size:3rem;
+    
+}
+
+.card-1{
+    animation:blink 1s ease infinite alternate;
+}
+
+@keyframes blink{
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform:scale(1);
+    }
+}
+
+
+
+.card-contents p{
+    font-size:2rem;
+}
+/* card section ends  */
+
+/* info section  */
+
+.info{
+    margin-top:4rem;
+}
+
+.info_text{
+    max-width:25rem;
+    line-height:1.5;
+    font-size:1.2rem;   
+}
+
+.info_text h2{
+
+    margin:0 auto;
+    overflow:hidden;
+    white-space: nowrap;
+    border-right:10px solid orangered;
+    animation:text_arrive 5s steps(40, end) infinite, blinking 0.3s step-end ;
+}
+
+.info_text p{
+    animation:text_show 2s ease-in-out 5;
+}
+
+.info_img{
+    border-radius:1rem;
+    box-shadow:5px 5px 4px rgba(0, 0, 0, 0.5);
+    transition:transform 0.2s ease-in-out;
+}
+
+.info_img:hover{
+    cursor:pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.3);
+    transform:rotateZ(10deg) scale(0.8);
+}
+
+@keyframes text_show{
+    from{
+        color:transparent;
+        transform:scale(0);
+    }
+
+    to{
+        color:initial;
+        transform:scale(1);
+    }
+}
+
+@keyframes text_arrive{
+    from{
+        width:0;
+    }
+    to{
+        width:100%;
+    }
+}
+
+@keyframes blinking{
+    from, to{
+        border-color:transparent;
+    }
+
+    50%{
+        border-color:orangered;
+    }
+}
+
+
+/* info section ends  */
+
+
+/* card section  */
+
+    .person{
+        background-color:#ccc;
+        padding-top:4rem;
+    }
+
+    .person h1{
+        text-align:center;
+    }
+    .card{
+        border:none;
+        background-color:#ccc;
+        padding-bottom:4rem;
+    }   
+
+    .card img{
+        margin-top: 2rem;
+        width:200px;
+        height:200px;
+        border-radius:50%;
+    }
+    .card-body p{
+        font-size:0.9rem;
+        text-align:center;
+    }
+
+    .card-body h3{
+        text-align:center;
+    }
+
+/* card section ends  */
+
+.hero_img1{
+    max-width:100vw;
+    min-height:500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)),url("images/hero.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+/* footer  */
+
+
+
+.footer_links{
+    font-size:2.3rem;
+    color:blue;
+}
+
+@media(max-width:768px){
+    .info_first{
+        order:10;
+        margin-top:1rem;
+    }
+
+    .info_second{
+        order:5;
+        margin-top:2rem;
+    }
+
+    .card-body p{
+        text-align:center;
+    }
+}
